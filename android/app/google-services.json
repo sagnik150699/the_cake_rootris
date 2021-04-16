@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "934414455577",
+    "project_id": "the-cake-rootris-21ead",
+    "storage_bucket": "the-cake-rootris-21ead.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934414455577:android:48aecd829d3055f101ab88",
+        "android_client_info": {
+          "package_name": "com.example.the_cake_rootris"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934414455577-pmg87fbpmuls3gs6pe1e5mnmhbr6rej9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.the_cake_rootris",
+            "certificate_hash": "f726ad8df75c315fc0f57d79ba55deaf03d0937c"
+          }
+        },
+        {
+          "client_id": "934414455577-re2k2488gth0al4m4drccrd7tp5o5921.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG3G0JfHA_q1r8z7SYTd52QpIv9RUVZZ4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934414455577-re2k2488gth0al4m4drccrd7tp5o5921.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
