@@ -26,8 +26,12 @@ apply plugin: 'com.google.gms.google-services'
 
 android {
     namespace 'com.example.the_cake_rootris'
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 36
     ndkVersion '28.2.13676358'
+
+    buildFeatures {
+        buildConfig true
+    }
 
     sourceSets {
         main.java.srcDirs += 'src/main/kotlin'

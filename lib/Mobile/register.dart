@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:the_cake_rootris/Mobile/mobile.dart';
 import 'package:the_cake_rootris/services/auth.dart';
-import 'file:///C:/Users/Sagnik%20Bhattacharya/Documents/Workspace/the_cake_rootris/lib/services/variable.dart';
+import 'package:the_cake_rootris/services/variable.dart';
 
 class RegisterScreen extends StatefulWidget {
   @override

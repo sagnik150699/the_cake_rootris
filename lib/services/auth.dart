@@ -7,11 +7,11 @@ class Authentication extends ChangeNotifier {
   final _auth = FirebaseAuth.instance;
   final GoogleSignIn _googleSignIn = GoogleSignIn();
   var uid;
-  String _error;
-  String get error => _error;
+  String? _error;
+  String? get error => _error;
 
-  String _search;
-  String get search => _search;
+  String? _search;
+  String? get search => _search;
 
   set search(String val) {
     notifyListeners();
@@ -29,7 +29,7 @@ class Authentication extends ChangeNotifier {
   emailLogin(var email, var password) async {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
-      uid = _auth.currentUser.uid;
+      uid = _auth.currentUser!.uid;
       return true;
     } catch (e) {
       error = e.toString();
@@ -43,11 +43,11 @@ class Authentication extends ChangeNotifier {
     try {
       await _auth.createUserWithEmailAndPassword(
           email: email, password: password);
-      uid = _auth.currentUser.uid;
+      uid = _auth.currentUser!.uid;
       return true;
     } catch (e) {
       //   print(e);
-      error = e;
+      error = e.toString();
       notifyListeners();
 
       return false;
@@ -56,7 +56,7 @@ class Authentication extends ChangeNotifier {
 
   setName(String name) async {
     try {
-      await _auth.currentUser.updateProfile(displayName: name);
+      await _auth.currentUser!.updateProfile(displayName: name);
     } catch (e) {
       print("The error while adding name $e");
     }
@@ -64,9 +64,9 @@ class Authentication extends ChangeNotifier {
 
   Future<String> requestName() async {
     try {
-      return _auth.currentUser.displayName;
+      return _auth.currentUser!.displayName ?? '';
     } catch (e) {
-      return (e);
+      return e.toString();
     }
   }
 
@@ -74,7 +74,7 @@ class Authentication extends ChangeNotifier {
   isSigned() async {
     try {
       //await _database.test();
-      uid = _auth.currentUser.uid;
+      uid = _auth.currentUser!.uid;
       return true;
     } catch (e) {
       print("Is not Signed in $e");
@@ -94,7 +94,7 @@ class Authentication extends ChangeNotifier {
       );
       final UserCredential authResult =
           await _auth.signInWithCredential(credential);
-      uid = authResult.user.uid;
+      uid = authResult.user!.uid;
       print("Google Signing In");
       return true;
     } else

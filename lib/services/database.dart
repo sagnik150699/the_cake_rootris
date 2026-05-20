@@ -11,9 +11,9 @@ class Database {
       FirebaseFirestore.instance.collection('price');
   final CollectionReference linkPic =
       FirebaseFirestore.instance.collection('linkPic');
-  List<String> dishName;
-  List<String> priceDish;
-  List<String> picLink;
+  List<String> dishName = [];
+  List<String> priceDish = [];
+  List<String> picLink = [];
 
   Future returnDish() async {
     // await FirebaseFirestore.instance
@@ -25,7 +25,7 @@ class Database {
     //     dishName.add(doc['$data']);
     //   });
     // });
-    Map ss1;
+    Map<String, dynamic> ss1 = {};
     final messages=await FirebaseFirestore.instance.collection('dish').get();
     for(var message in messages.docs){
      // print(message.data());
@@ -37,7 +37,7 @@ class Database {
   }
   Future test()async{
     List ss =[];
-    Map ss1;
+    Map<String, dynamic> ss1 = {};
   final messages=await FirebaseFirestore.instance.collection('dish').get();
   for(var message in messages.docs){
     print(message.data());
@@ -50,7 +50,7 @@ class Database {
   }
 
   Future returnPrice() async {
-    Map ss1;
+    Map<String, dynamic> ss1 = {};
     final messages=await FirebaseFirestore.instance.collection('price').get();
     for(var message in messages.docs){
     //  print(message.data());
@@ -62,7 +62,7 @@ class Database {
   }
 
   Future returnLinks() async {
-    Map ss1;
+    Map<String, dynamic> ss1 = {};
     final messages=await FirebaseFirestore.instance.collection('linkPic').get();
     for(var message in messages.docs){
      // print(message.data());

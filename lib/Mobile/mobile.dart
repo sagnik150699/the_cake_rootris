@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:the_cake_rootris/services/auth.dart';
-import 'file:///C:/Users/Sagnik%20Bhattacharya/Documents/Workspace/the_cake_rootris/lib/services/variable.dart';
+import 'package:the_cake_rootris/services/variable.dart';
 import 'package:the_cake_rootris/services/database.dart';
 
 class Mobile extends StatefulWidget {
@@ -11,7 +11,7 @@ class Mobile extends StatefulWidget {
 class _MobileState extends State<Mobile> {
   Authentication _authentication = new Authentication();
   //TextEditingController search= TextEditingController();
-  String search1=Authentication().search;
+  String? search1=Authentication().search;
   Database _database = new Database();
   Variable variable = new Variable();
   List<Stack> stacks=[];
